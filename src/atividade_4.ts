@@ -1,10 +1,8 @@
 export class Farmacia {
-  nome: string;
   responsavelTecnico: string;
   remedios: string[];
 
-  constructor(nome: string, responsavelTecnico: string, remedios: string[]) {
-    this.nome = nome;
+  constructor(responsavelTecnico: string, remedios: string[]) {
     this.responsavelTecnico = responsavelTecnico;
     this.remedios = remedios;
   }
@@ -23,7 +21,16 @@ export class Farmacia {
 }
 
 export class Drogasil extends Farmacia {
-  endereco!: string;
+  endereco: string;
+
+  constructor(
+    responsavelTecnico: string,
+    remedios: string[],
+    endereco: string
+  ) {
+    super(responsavelTecnico, remedios);
+    this.endereco = endereco;
+  }
 
   mostrarEndereco() {
     console.log(`O endereço da Drogasil é: ${this.endereco}`);

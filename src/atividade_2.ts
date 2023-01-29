@@ -13,7 +13,7 @@ export class Retangulo implements FormatoDeElemento {
 
   desenhar(): void {
     let perimetro = 2 * (this.altura + this.comprimento);
-    console.log(`Perímetro do círculo é igual a ${perimetro}`);
+    console.log(`Perímetro do retângulo é igual a ${perimetro}`);
   }
   redimensionar(novaAltura: number, novoComprimento: number): void {
     (this.altura = novaAltura), (this.comprimento = novoComprimento);

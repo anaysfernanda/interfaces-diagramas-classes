@@ -12,7 +12,7 @@ export class Pedido {
       return current + item.valor;
     }, 0);
 
-    console.log(`O valor total é R$" ${resultado}`);
+    console.log(`O valor total é R$ ${resultado}`);
   }
 }
 
